@@ -12,7 +12,6 @@ function setup() {
 	//createCanvas(displayWidth, displayHeight);
   createCanvas(1080,1920);
 	fill(255);
-	noStroke();
   textSize(30);
 
   sound1.play();
@@ -27,13 +26,13 @@ function setup() {
 }
 
 function deviceMoved() {
-  dir = radians(rotationX);
-  pos.x -= cos(dir)*3
-  pos.y -= sin(dir)*3
+  pos.x -= cos(dir)*3;
+  pos.y -= sin(dir)*3;
 }
 
 
 function draw() {
+  dir = radians(rotationX);
 //  pos.x = mouseX;
 //  pos.y = mouseY;
 
