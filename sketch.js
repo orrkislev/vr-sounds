@@ -51,5 +51,9 @@ function draw() {
 	ellipse(pos.x,pos.y,s);
   stroke(255);
   line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
+  
+  text(rotationX,10,10);
+  text(rotationY,10,30);
+  text(rotationZ,10,50);
 
 }
