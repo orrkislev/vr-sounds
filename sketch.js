@@ -26,8 +26,8 @@ function setup() {
 }
 
 function deviceMoved() {
-  pos.x -= cos(dir);
-  pos.y -= sin(dir);
+  pos.x -= cos(dir)*2;
+  pos.y -= sin(dir)*2;
   pos.x = constrain(pos.x,0,width)
   pos.y = constrain(pos.y,0,height)
 }
@@ -55,7 +55,7 @@ function draw() {
   line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
   
 //  text(rotationX,10,10);
-  //text(rotationY,10,30);
+text(int(rotationY),10,30);
 //  text(rotationZ,10,50);
 
 }
