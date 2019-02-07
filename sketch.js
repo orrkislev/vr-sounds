@@ -28,8 +28,8 @@ function setup() {
 
 function deviceMoved() {
   dir = radians(rotationX);
-  pos.x += cos(dir)
-  pos.y += sin(dir)
+  pos.x -= cos(dir)*3
+  pos.y -= sin(dir)*3
 }
 
 
@@ -44,10 +44,13 @@ function draw() {
 
 	background(0);
   fill(130);
+  noStroke();
   ellipse(sound1Pos.x,sound1Pos.y,400)
   ellipse(sound2Pos.x,sound2Pos.y,400)
   ellipse(sound3Pos.x,sound3Pos.y,400)
   fill(255)
 	ellipse(pos.x,pos.y,s);
+  stroke(255);
+  line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
 
 }
