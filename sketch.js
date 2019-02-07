@@ -26,13 +26,15 @@ function setup() {
 }
 
 function deviceMoved() {
-  pos.x -= cos(dir)*3;
-  pos.y -= sin(dir)*3;
+  pos.x -= cos(dir);
+  pos.y -= sin(dir);
+  pos.x = constrain(pos.x,0,width)
+  pos.y = constrain(pos.y,0,height)
 }
 
 
 function draw() {
-  dir = radians(rotationX);
+  dir = radians(rotationY);
 //  pos.x = mouseX;
 //  pos.y = mouseY;
 
