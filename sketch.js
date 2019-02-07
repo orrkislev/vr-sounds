@@ -1,3 +1,4 @@
+dir = 0;
 s = 30;
 
 function preload() {
@@ -22,13 +23,19 @@ function setup() {
   sound3Pos = createVector(width,height);
 
 	pos = createVector(width/2,height/2);
-  speed = createVector(0,0);
+//  speed = createVector(0,0);
 }
 
-function draw() {
+function deviceMoved() {
+  dir = radians(rotationX);
+  pos.x += cos(dir)
+  pos.y += sin(dir)
+}
 
-  pos.x = mouseX;
-  pos.y = mouseY;
+
+function draw() {
+//  pos.x = mouseX;
+//  pos.y = mouseY;
 
 
   sound1.setVolume(constrain(map(pos.dist(sound1Pos),0,700,0.1,0),0,0.1))
