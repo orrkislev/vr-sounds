@@ -56,6 +56,6 @@ function draw() {
   
 //text(int(rotationX),10,10);
 //text(int(rotationY),10,30);
-text(int(rotationZ),10,50);
+text(int(rotationZ),10,60);
 
 }
