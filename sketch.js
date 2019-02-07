@@ -34,7 +34,7 @@ function deviceMoved() {
 
 
 function draw() {
-  dir = rotationY;
+  dir = rotationY/180;
 //  pos.x = mouseX;
 //  pos.y = mouseY;
 
@@ -55,7 +55,7 @@ function draw() {
   line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
   
 //  text(rotationX,10,10);
-//  text(rotationY,10,30);
+  //text(rotationY,10,30);
 //  text(rotationZ,10,50);
 
 }
