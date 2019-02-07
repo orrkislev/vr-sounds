@@ -10,7 +10,7 @@ function preload() {
 
 function setup() {
 	//createCanvas(displayWidth, displayHeight);
-  createCanvas(1080,1920);
+  createCanvas(1000,1200);
 	fill(255);
   textSize(30);
 
@@ -26,8 +26,8 @@ function setup() {
 }
 
 function deviceMoved() {
-  pos.x -= cos(dir)*2;
-  pos.y -= sin(dir)*2;
+  pos.x -= cos(dir)*3;
+  pos.y -= sin(dir)*3;
   pos.x = constrain(pos.x,0,width)
   pos.y = constrain(pos.y,0,height)
 }
