@@ -38,8 +38,8 @@ function deviceMoved() {
 
 function draw() {
   dir = (rotationZ/180)*PI;
-//  pos.x = mouseX;
-//  pos.y = mouseY;
+  pos.x = mouseX;
+  pos.y = mouseY;
 
 
   sound1.setVolume(constrain(map(pos.dist(sound1Pos),0,700,0.1,0),0,0.1))
