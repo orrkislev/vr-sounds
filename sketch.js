@@ -2,15 +2,16 @@ dir = 0;
 s = 30;
 
 function preload() {
-   soundFormats('mp3', 'ogg');
-   sound1 = loadSound('boniver.mp3');
-   sound2 = loadSound('debussy.mp3');
-   sound3 = loadSound('django.mp3');
+   soundFormats('mp3', 'ogg', 'wav');
+   sound1 = loadSound('1.mp3');
+   sound2 = loadSound('2.mp3');
+   sound3 = loadSound('3.wav');
+  sound3 = loadSound('4.mp3');
 }
 
 function setup() {
 	//createCanvas(displayWidth, displayHeight);
-  createCanvas(1000,1200);
+  createCanvas(1000,1500);
 	fill(255);
   textSize(30);
 
@@ -19,7 +20,9 @@ function setup() {
   sound2.play();
   sound2Pos = createVector(0,height/2);
   sound3.play();
-  sound3Pos = createVector(width,height);
+  sound3Pos = createVector(width,height*0.3);
+  sound4.play();
+  sound4Pos = createVector(width,height);
 
 	pos = createVector(width/2,height/2);
 //  speed = createVector(0,0);
@@ -34,7 +37,7 @@ function deviceMoved() {
 
 
 function draw() {
-  dir = (rotationZ/180)*PI;
+  dir = (rotationX/180)*PI;
 //  pos.x = mouseX;
 //  pos.y = mouseY;
 
@@ -42,6 +45,7 @@ function draw() {
   sound1.setVolume(constrain(map(pos.dist(sound1Pos),0,700,0.1,0),0,0.1))
   sound2.setVolume(constrain(map(pos.dist(sound2Pos),0,700,1,0),0,1))
   sound3.setVolume(constrain(map(pos.dist(sound3Pos),0,700,1,0),0,1))
+  sound4.setVolume(constrain(map(pos.dist(sound4Pos),0,700,1,0),0,1))
 
 	background(0);
   fill(130);
@@ -49,6 +53,7 @@ function draw() {
   ellipse(sound1Pos.x,sound1Pos.y,400)
   ellipse(sound2Pos.x,sound2Pos.y,400)
   ellipse(sound3Pos.x,sound3Pos.y,400)
+  ellipse(sound4Pos.x,sound4Pos.y,400)
   fill(255)
 	ellipse(pos.x,pos.y,s);
   stroke(255);
@@ -56,6 +61,6 @@ function draw() {
   
 //text(int(rotationX),10,10);
 //text(int(rotationY),10,30);
-text(int(rotationZ),10,60);
+//text(int(rotationZ),10,60);
 
 }
