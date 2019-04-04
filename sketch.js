@@ -59,7 +59,7 @@ function draw() {
   fill(255)
 	ellipse(pos.x,pos.y,s);
   stroke(255);
-  line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
+  //line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
 
   text(movSum,10,10);
 //text(int(rotationX),10,10);
