@@ -2,10 +2,10 @@ dir = 0;
 s = 30;
 
 function preload() {
-   soundFormats('mp3', 'ogg', 'wav');
+   soundFormats('mp3', 'ogg');
    sound1 = loadSound('1.mp3');
    sound2 = loadSound('2.mp3');
-   sound3 = loadSound('3.wav');
+//   sound3 = loadSound('3.wav');
    sound4 = loadSound('4.mp3');
 }
 
@@ -19,7 +19,7 @@ function setup() {
   sound1Pos = createVector(width/2,0);
   sound2.play();
   sound2Pos = createVector(0,height/2);
-  sound3.play();
+//  sound3.play();
   sound3Pos = createVector(width,height*0.3);
   sound4.play();
   sound4Pos = createVector(width,height);
@@ -46,7 +46,7 @@ function draw() {
 
   sound1.setVolume(constrain(map(pos.dist(sound1Pos),0,700,0.1,0),0,0.1))
   sound2.setVolume(constrain(map(pos.dist(sound2Pos),0,700,1,0),0,1))
-  sound3.setVolume(constrain(map(pos.dist(sound3Pos),0,700,1,0),0,1))
+//  sound3.setVolume(constrain(map(pos.dist(sound3Pos),0,700,1,0),0,1))
   sound4.setVolume(constrain(map(pos.dist(sound4Pos),0,700,1,0),0,1))
 
 	background(0);
