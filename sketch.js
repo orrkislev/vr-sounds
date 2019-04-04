@@ -6,7 +6,7 @@ function preload() {
    sound1 = loadSound('1.mp3');
    sound2 = loadSound('2.mp3');
    sound3 = loadSound('3.wav');
-  sound4 = loadSound('4.mp3');
+   sound4 = loadSound('4.mp3');
 }
 
 function setup() {
