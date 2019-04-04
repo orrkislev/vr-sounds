@@ -27,8 +27,10 @@ function setup() {
 	pos = createVector(width/2,height/2);
 //  speed = createVector(0,0);
 }
+movSum = 0;
 
 function deviceMoved() {
+  movSum++;
   pos.x -= cos(dir)*6;
   pos.y -= sin(dir)*6;
   pos.x = constrain(pos.x,0,width)
@@ -38,8 +40,8 @@ function deviceMoved() {
 
 function draw() {
   dir = (rotationZ/180)*PI;
-  pos.x = mouseX;
-  pos.y = mouseY;
+//  pos.x = mouseX;
+//  pos.y = mouseY;
 
 
   sound1.setVolume(constrain(map(pos.dist(sound1Pos),0,700,0.1,0),0,0.1))
@@ -58,7 +60,8 @@ function draw() {
 	ellipse(pos.x,pos.y,s);
   stroke(255);
   line(pos.x,pos.y,pos.x+cos(dir)*30,pos.y+sin(dir)*30)
-  
+
+  text(movSum,10,10);
 //text(int(rotationX),10,10);
 //text(int(rotationY),10,30);
 //text(int(rotationZ),10,60);
